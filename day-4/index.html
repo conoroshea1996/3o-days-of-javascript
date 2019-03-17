@@ -7,6 +7,7 @@
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
   <script>
+    //The fun starts here :D
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
 
@@ -32,18 +33,25 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 
+    //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+    
     const Fifteen = inventors.filter(inventor => (inventor.year >=1500 && inventor.year <=1599));
 
     console.table(Fifteen);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    
+    //The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+    
       const FullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}.`)
 
       console.table(FullNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    //The sort() method sorts the elements of an array in place and returns the array.
+    
     const birthdate = inventors.sort((FirstPerson,SecondPerson)=>{
           if (FirstPerson.year > SecondPerson.year){
             return 1;
@@ -57,7 +65,7 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
-
+    //The reduce() method executes a reducer function (that you provide) on each member of the array resulting in a single output value.
     const YearsLived = inventors.reduce((total,inventor)=>{
 
       return total +(inventor.passed - inventor.year);
