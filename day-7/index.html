@@ -24,8 +24,10 @@
       { text: 'Nice Nice Nice!', id: 542328 }
     ];
 
+   // get this years date to do some calculations
+    const currentYear = (new Date).getFullYear();#
+    
     // Some and Every Checks
-    const currentYear = (new Date).getFullYear();
     // Array.prototype.some() // is at least one person 19 or older?
     const adult = people.some(function (person){
       
